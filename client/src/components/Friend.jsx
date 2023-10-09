@@ -30,11 +30,12 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
-      }
+      } 
     );
-    if(response.ok) return console.log("Friend patched successfully");
+  
     const data = await response.json();
     dispatch(setFriends({ friends: data }));
+    
   };
 
   return (

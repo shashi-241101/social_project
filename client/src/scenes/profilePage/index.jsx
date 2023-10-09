@@ -11,9 +11,9 @@ import UserWidget from "../widgets/UserWidget";
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const { userId } = useParams();
-  console.log(userId);
+  
   const token = useSelector((state) => state.token);
-  console.log(token);
+  
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const getUser = async () => {
@@ -38,7 +38,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     getUser();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); 
 
   if (!user) {
     // Handle the case when user data is not available yet
