@@ -22,7 +22,7 @@ const ProfilePage = () => {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       });
-     console.log(response);
+     
       if (!response.ok) {
         // Handle non-OK response status (e.g., 404 or 500)
         throw new Error(`Request failed with status ${response.status}`);
